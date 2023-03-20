@@ -15,3 +15,13 @@ puts "started seeeeedding!!"
   address = Faker::Address.full_address
   Restaurant.create(name: name, address: address)
 end
+
+# 20 pizzas
+20.times do
+    name = Faker::Food.dish
+    ingredients = Faker::Food.ingredient
+    Pizza.create(name: name, ingredients: ingredients)
+  end
+
+  
+  
