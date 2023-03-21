@@ -20,6 +20,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_20_194150) do
 
   create_table "restaurant_pizzas", force: :cascade do |t|
     t.string "name"
+    t.integer "pizza_id"
+    t.integer "restaurant_id"
     t.string "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -27,7 +29,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_20_194150) do
 
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
-    t.string "adress"
+    t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
