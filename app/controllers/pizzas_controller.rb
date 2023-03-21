@@ -1,11 +1,11 @@
 class PizzasController < ApplicationController
     def index
         pizzas = Pizza.all
-        render json: pizzas, include: :restraunts
+        render json: pizzas, include: :restaurants
       end
       def show
           pizza = find_pizzas
-          render json: pizza, include: :restraunts
+          render json: pizza, include: :restaurants
       end
   
   private
