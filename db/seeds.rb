@@ -1,6 +1,6 @@
 
 # Create 20 restaurants
-puts "started seeeeedding!!"
+puts "started seeding!!"
 
 20.times do
   name = Faker::Restaurant.name
@@ -25,4 +25,4 @@ end
   RestaurantPizza.create(name: name, price: price, pizza_id: pizza_id, restaurant_id: restaurant_id)
 end
 
-puts "Compleeeted seeeding!!!"
+puts "Completed seeding!!!"
