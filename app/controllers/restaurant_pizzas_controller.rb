@@ -3,7 +3,7 @@ class RestaurantPizzasController < ApplicationController
 
     def index
         restaurant_pizzas = RestaurantPizza.all
-        render json: restaurant_pizzas
+        render json: restaurant_pizzas, include: [:pizzas]
     end
     def create
         restaurant_pizza = RestaurantPizza.create(create_restaurant_pizza)

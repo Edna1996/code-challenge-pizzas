@@ -10,21 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_21_122645) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_22_113628) do
   create_table "pizzas", force: :cascade do |t|
     t.string "name"
+    t.string "ingredients"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "ingredients"
   end
 
   create_table "restaurant_pizzas", force: :cascade do |t|
-    t.string "name"
-    t.integer "pizza_id"
-    t.integer "restaurant_id"
-    t.string "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+    t.integer "price"
+    t.integer "restaurant_id"
+    t.integer "pizza_id"
   end
 
   create_table "restaurants", force: :cascade do |t|
